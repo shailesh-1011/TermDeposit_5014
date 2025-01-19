@@ -61,8 +61,4 @@ The dataset used for this project is derived from direct marketing campaigns con
 - **Duration of Last Contact**: Impact of call duration on subscription likelihood.
 - **Previous Campaign Outcome**: Influence of previous campaign outcomes on current subscriptions.
 
-### How to Run the Project
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
