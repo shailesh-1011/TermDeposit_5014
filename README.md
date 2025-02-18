@@ -1,64 +1,111 @@
 # Term Deposit Subscription Prediction
 
-Welcome to the **Term Deposit Subscription Prediction** project! This repository contains all the resources related to predicting whether a customer will subscribe to a term deposit based on various features of a telephonic marketing campaign conducted by a Portuguese banking institution.
+## Introduction
+
+This project focuses on predicting whether clients will subscribe to a term deposit based on data from telephonic marketing campaigns conducted by a Portuguese banking institution. The goal is to develop a predictive model that identifies clients most likely to subscribe, thereby optimizing marketing efforts and reducing costs.
 
 ## Project Overview
 
-Term deposits are a crucial source of income for banks. The goal of this project is to build a predictive model that can identify customers who are likely to subscribe to a term deposit. This helps in targeting the right customers and optimizing the marketing efforts.
+### Problem Statement
 
-### Data Description
+Term deposits are a significant source of income for banks. Telephonic marketing campaigns, while effective, require substantial investment. Our aim is to build a predictive model that helps identify clients who are most likely to subscribe to a term deposit, ensuring a targeted and cost-efficient approach.
 
-The dataset used for this project is derived from direct marketing campaigns conducted through phone calls. The dataset includes two files:
+### Objective
 
-- **train.csv**: Contains 40,000 rows and 17 columns.
-- **test.csv**: Contains 5,211 rows and 16 columns.
+The objective is to predict if a client will subscribe to a term deposit using various client and campaign-related features. By accurately predicting client behavior, banks can optimize their telephonic marketing campaigns and allocate resources more effectively.
 
-#### Columns in the Dataset
+## Data Description
 
-1. **age**: Age of the client (numeric).
-2. **job**: Type of job (categorical).
-3. **marital**: Marital status (categorical).
-4. **education**: Level of education (categorical).
-5. **default**: Has credit in default? (binary).
-6. **balance**: Average yearly balance in euros (numeric).
-7. **housing**: Has a housing loan? (binary).
-8. **loan**: Has a personal loan? (binary).
-9. **contact**: Contact communication type (categorical).
-10. **day**: Last contact day of the month (numeric).
-11. **month**: Last contact month of year (categorical).
-12. **duration**: Last contact duration in seconds (numeric).
-13. **campaign**: Number of contacts performed during this campaign (numeric).
-14. **pdays**: Days since the client was last contacted (numeric).
-15. **previous**: Number of contacts performed before this campaign (numeric).
-16. **poutcome**: Outcome of the previous marketing campaign (categorical).
-17. **y**: Has the client subscribed to a term deposit? (binary, target variable).
+The dataset consists of data related to telephonic marketing campaigns of a Portuguese banking institution. It includes information on clients, campaign details, and previous campaign outcomes. The data is divided into training and test sets:
 
-### Tools Used
+- **Training Set**: 40,000 rows and 17 columns
+- **Test Set**: 5,211 rows and 16 columns (without target variable)
 
-- **Python**: For data cleaning, preprocessing, and modeling.
-- **Pandas**: For data manipulation.
-- **NumPy**: For numerical computations.
-- **Matplotlib** & **Seaborn**: For data visualization.
-- **Power BI**: For creating interactive dashboards.
-- **Streamlit**: For building web apps to showcase insights.
+### Column Descriptions
 
-### Project Structure
+1. **Client Data**:
+   - `age`: Age of the client (numeric)
+   - `job`: Type of job (categorical)
+   - `marital`: Marital status (categorical)
+   - `education`: Education level (categorical)
+   - `default`: Credit in default (binary)
+   - `balance`: Average yearly balance in euros (numeric)
+   - `housing`: Housing loan (binary)
+   - `loan`: Personal loan (binary)
 
-- **data/**: Contains the train and test CSV files.
-- **notebooks/**: Jupyter notebooks for data exploration and model development.
-- **scripts/**: Python scripts for data preprocessing and modeling.
-- **visualizations/**: Power BI dashboards and exported PDF reports.
-- **readme.md**: Project documentation.
+2. **Last Contact of Campaign**:
+   - `contact`: Contact communication type (categorical)
+   - `day`: Last contact day of the month (numeric)
+   - `month`: Last contact month of the year (categorical)
+   - `duration`: Last contact duration in seconds (numeric)
 
-### Key Insights & Visualizations
+3. **Other Attributes**:
+   - `campaign`: Number of contacts performed during this campaign (numeric)
+   - `pdays`: Number of days since the client was last contacted from a previous campaign (numeric)
+   - `previous`: Number of contacts performed before this campaign (numeric)
+   - `poutcome`: Outcome of the previous marketing campaign (categorical)
 
-- **Age Distribution**: Distribution of customers' ages.
-- **Job Type Analysis**: Subscription rates across different job types.
-- **Marital Status**: Impact of marital status on subscription.
-- **Education Level**: Subscription rates by education level.
-- **Contact Method**: Effectiveness of different contact methods.
-- **Balance vs Subscription**: Relationship between balance and subscription.
-- **Duration of Last Contact**: Impact of call duration on subscription likelihood.
-- **Previous Campaign Outcome**: Influence of previous campaign outcomes on current subscriptions.
+4. **Target**:
+   - `y`: Has the client subscribed to a term deposit? (binary)
+
+## Approach
+
+### Data Preprocessing
+
+1. Handling missing values
+2. Encoding categorical variables
+3. Scaling numerical features
+4. Removing outliers
+5. Handling imbalanced data using SMOTE
+
+### Feature Engineering
+
+1. Creating polynomial features
+2. Interaction terms between features
+
+### Model Selection
+
+We chose Logistic Regression for its simplicity, efficiency, and interpretability. It is ideal for binary classification tasks and provides clear insights into feature importance. 
+
+### Hyperparameter Tuning
+
+Used GridSearchCV to find the best parameters for the model, ensuring optimal performance.
+
+## Model Evaluation
+
+The model was evaluated using the following metrics:
+
+- **Accuracy**
+- **Precision**
+- **Recall**
+- **F1 Score**
+- **ROC-AUC Score**
+
+## Results
+
+- **Best Parameters**: 'C': 0.1, 'max_iter': 100, 'penalty': 'l1', 'solver': 'saga'
+- **Validation Accuracy**: 0.83
+- **Validation F1 Score**: 0.83
+
+## Screenshots
+
+![Home Page](https://github.com/shailesh-1011/TermDeposit_5014/blob/main/Logos/HomePage.png)
+
+
+![Page 1](https://github.com/shailesh-1011/TermDeposit_5014/blob/main/Logos/Page%201.png)
+
+
+![Page 2](https://github.com/shailesh-1011/TermDeposit_5014/blob/main/Logos/Page%202.png)
+
+
+## Conclusion
+
+In conclusion, our project successfully leveraged Logistic Regression to enhance telephonic marketing campaigns for term deposit subscriptions. By identifying clients most likely to subscribe, we optimized marketing efforts and reduced costs. The model's simplicity and interpretability make it a valuable tool for banks to make data-driven decisions.
+
+## Authors
+
+- Shailesh
+- Anand Nair
+- Prashant Patil
 
 
