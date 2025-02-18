@@ -89,13 +89,13 @@ The model was evaluated using the following metrics:
 
 ## Screenshots
 
-## Home Page
+#### Home Page
 ![Home Page](https://github.com/shailesh-1011/TermDeposit_5014/blob/main/Logos/HomePage.png)
 
-## Dashboard Page 1
+#### Dashboard Page 1
 ![Page 1](https://github.com/shailesh-1011/TermDeposit_5014/blob/main/Logos/Page%201.png)
 
-## Dashboard Page 2
+#### Dashboard Page 2
 ![Page 2](https://github.com/shailesh-1011/TermDeposit_5014/blob/main/Logos/Page%202.png)
 
 
