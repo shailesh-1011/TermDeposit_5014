@@ -105,7 +105,7 @@ In conclusion, our project successfully leveraged Logistic Regression to enhance
 
 ## Authors
 
-- Shailesh
+- Shailesh Kumar Singh
 - Anand Nair
 - Prashant Patil
 
